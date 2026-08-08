@@ -16,8 +16,8 @@ void setup() {
   Serial.begin(115200);
 
   pinMode(SWITCH_RIGHT, INPUT_PULLUP);
-	pinMode(SWITCH_FORWARD, INPUT_PULLUP);
-	pinMode(SWITCH_LEFT, INPUT_PULLUP);
+  pinMode(SWITCH_FORWARD, INPUT_PULLUP);
+  pinMode(SWITCH_LEFT, INPUT_PULLUP);
   
   motor1.setSpeed(NORMAL_SPEED);
   motor2.setSpeed(NORMAL_SPEED);
