@@ -1,4 +1,6 @@
+//slight modification of Anyav's code to allow for wokwi simulation
 #include <AFMotor.h>
+// In the wokwi interface, add Adafruit Motor Shield Library in the "Library Manager" tab to allow it to compile
 
 #define SWITCH_RIGHT A0
 #define SWITCH_FORWARD A1
@@ -13,7 +15,7 @@ int activePin = 0;
 int NORMAL_SPEED = 150;
 
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(115200); //standard high baud rate for instaneous response
 
   pinMode(SWITCH_RIGHT, INPUT_PULLUP);
   pinMode(SWITCH_FORWARD, INPUT_PULLUP);
@@ -60,28 +62,28 @@ void loop() {
   */
   switch (activePin) {
     case 0:
-      Serial.println("STOP");
+      Serial.println("STOP"); //outputs text "STOP" when no buttons are pressed or more than one button is pressed
       motor1.run(RELEASE);
       motor2.run(RELEASE);
       motor3.run(RELEASE);
       motor4.run(RELEASE);
       break;
     case 1:
-      Serial.println("TURNING RIGHT");
+      Serial.println("RIGHT"); //outputs text "RIGHT" when car goes right
       motor1.run(BACKWARD);
       motor2.run(FORWARD);
       motor3.run(BACKWARD);
       motor4.run(FORWARD);
       break;
     case 2:
-      Serial.println("MOVING FORWARD");
+      Serial.println("FORWARD"); //outputs text "FORWARD" when car goes forward
       motor1.run(FORWARD);
       motor2.run(FORWARD);
       motor3.run(FORWARD);
       motor4.run(FORWARD);
       break;
     case 3:
-      Serial.println("TURNING LEFT");
+      Serial.println("TURNING LEFT"); //outputs text "LEFT" when car goeds left
       motor1.run(FORWARD);
       motor2.run(BACKWARD);
       motor3.run(FORWARD);
