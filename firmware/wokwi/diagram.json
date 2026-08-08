@@ -1,1 +1,38 @@
-
+{
+  "version": 1,
+  "author": "Joshua Perry",
+  "editor": "wowki",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn_right",
+      "top": -61,
+      "left": -57.6,
+      "attrs": { "color": "red", "label": "RIGHT (A0)" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn_forward",
+      "top": -61,
+      "left": 38.4,
+      "attrs": { "color": "green", "label": "FORWARD (A1)" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn_left",
+      "top": -61,
+      "left": 134.4,
+      "attrs": { "color": "blue", "label": "LEFT (A2)" }
+    }
+  ],
+  "connections": [
+    [ "btn_right:1.L", "uno:GND.1", "black", [ "v0" ] ],
+    [ "btn_right:2.R", "uno:A0", "red", [ "v0" ] ],
+    [ "btn_forward:1.L", "uno:GND.1", "black", [ "v0" ] ],
+    [ "btn_forward:2.R", "uno:A1", "green", [ "v0" ] ],
+    [ "btn_left:1.L", "uno:GND.1", "black", [ "v0" ] ],
+    [ "btn_left:2.R", "uno:A2", "blue", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
