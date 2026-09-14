@@ -8,7 +8,7 @@ const int SENSOR_PIN      = A3;
 const int IN1             = A4;
 const int IN2             = A5;
 const int IN3             = 2;
-const int IN4             = 12;
+const int IN4             = 9;
 
 const int STEPS_PER_REV   = 2048;   // number of steps per full revolution for auger (can be modified in testing)
 const int ROTATION_SPEED  = 12;     // highest auger rotation speed possible while remaining confidently reliable (higher = not enough torque)
